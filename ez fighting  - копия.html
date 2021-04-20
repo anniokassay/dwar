@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script
+  src="https://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+	<meta charset="UTF-8">
+	<title>fighting</title>
+</head>
+<body>
+  <script>
+    /*  <iframe width="94" height="53" src="https://www.youtube.com/embed/YnME5O5kxu8" frameborder="0" allow="accelerometer; autoplay; clipboard-write; gyroscope; picture-in-picture" allowfullscreen align="left" autostart="true" ></iframe>
+    <style type="text/css">
+ body{
+ 
+    background: url(back.jpg); background-size: cover;
+
+          <p><img id="img" src="https://upload.redwall.ru/monthly_2018_12/small.16fe59722449.jpg.657b65d5509826a2db3c9011742e951b.jpg" 
+        style="  position:absolute;  top:400px; right: 0px;"  width="300" height="370" alt="Письма мастера дзен"></p>
+</style>
+*/
+  </script>
+
+        <p><img id="enemy1" class="enemypic" src="https://upload.redwall.ru/monthly_2018_12/small.16fe59722449.jpg.657b65d5509826a2db3c9011742e951b.jpg" 
+        style="  position:absolute;  top:400px; right: 20px;"  width="100" height="100" >
+        <img id="enemy2" class="enemypic" src="https://upload.redwall.ru/monthly_2018_12/small.16fe59722449.jpg.657b65d5509826a2db3c9011742e951b.jpg" 
+        style="  position:absolute;  top:400px; right: 130px;"  width="100" height="100" >
+        <img id="enemy3" class="enemypic" src="https://upload.redwall.ru/monthly_2018_12/small.16fe59722449.jpg.657b65d5509826a2db3c9011742e951b.jpg" 
+        style="  position:absolute;  top:400px; right: 240px;"  width="100" height="100" >
+        <img id="enemy4" class="enemypic" src="https://upload.redwall.ru/monthly_2018_12/small.16fe59722449.jpg.657b65d5509826a2db3c9011742e951b.jpg" 
+        style="  position:absolute;  top:400px; right: 350px;"  width="100" height="100" > 
+
+
+        <p><img  id= "шлем" class="armory" src="helmet.jpg" 
+        style="  position:absolute;  top:150px; right: 700px;"  width="20" height="20" >
+        <img id= "плечи" class="armory" src="gloves.jpg" 
+        style="  position:absolute;  top:175px; right: 700px;"  width="20" height="20" >
+        <img id= "руки"  class="armory" src="sholders.jpg" 
+        style="  position:absolute;  top:200px; right: 700px;"  width="20" height="20" >
+        <img id= "броня" class="armory" src="armor.jpg" 
+        style="  position:absolute;  top:150px; right: 670px;"  width="20" height="20" >        
+        <img id= "оружие" class="armory" src="weapon.jpg" 
+        style="  position:absolute;  top:175px; right: 670px;"  width="20" height="20" >
+        <img id= "поножи" class="armory" src="pants.jpg" 
+        style="  position:absolute;  top:200px; right: 670px;"  width="20" height="20" >
+        <img id= "ботинки" class="armory" src="boots.jpg" 
+        style="  position:absolute;  top:150px; right: 640px;"  width="20" height="20" >
+        <button type="button" id="starting" class="b3"  style="background-color: grey;  position:absolute;  top:150px; right:640px;" >стартовый(60g)</button>
+        <button type="button" id="medium" class="b3"  style="background-color: lightgreen;  position:absolute;  top:175px; right:640px;" >средний(100g)</button>
+        <button type="button" id="good" class="b3"  style="background-color: green;  position:absolute;  top:200px; right:640px;" >хороший(160g)</button>
+        <button type="button" id="epic" class="b3"  style="background-color: violet;  position:absolute;  top:225px; right:640px;" >эпический(300g)</button>
+        <button type="button" id="resurrected" class="b3"  style="background-color: pink;  position:absolute;  top:250px; right:640px;" >запрещенный(440g)</button>
+        <button type="button" id="legendary" class="b3"  style="background-color: gold;  position:absolute;  top:275px; right:640px;">легендарный(600g)</button>
+        <button type="button" id="godness" class="b3"  style="background-color: crimson;  position:absolute;  top:300px; right:640px;" >божественный(900g)</button>
+        <button type="button" id="killer" class="b3"  style="background-color: red;  position:absolute;  top:250px; right:640px;" >Убийца</button>
+        <button type="button" id="wizzard" class="b3"  style="background-color: blue;  position:absolute;  top:275px; right:640px;">Колдун</button>
+        <button type="button" id="rock" class="b3"  style="background-color: grey;  position:absolute;  top:300px; right:640px;" >Скала</button>          
+  <script>
+       /* <helmet id="helmet" style="  position:absolute;  top:0px; left: 645px;"> Helmet</helmet>
+        <shoulders id="shoulders" style="  position:absolute;  top:50px; left: 645px;"> Shoulders</shoulders>
+        <gloves id="gloves" style="  position:absolute;  top:25px; left: 645px;"> Gloves</gloves>
+        <armor id="armor" style="  position:absolute;  top:75px; left: 645px;"> Armor</armor>
+        <weapon id="weapon" style="  position:absolute;  top:100px; left: 645px;"> Weapon</weapon>
+        <pants id="pants"style="  position:absolute;  top:125px; left: 645px;"> Pants</pants>
+        <boots id="boots" style="  position:absolute;  top:150px; left: 645px;"> Boots</boots>
+*/
+  </script>
+    <a ><button type="button" id="level"class="b1 lvl pics" title="Текущий уровень">Уровень</button>
+  <button type="button" id="health" class="health b1" title="Текущее здоровье">Здоровье</button>
+  <button type="button" id="stam" class="b1 stamina" title="Текущая Мана">Мана</button>
+    <button type="button" id="таланты"class="b1" title="очки талантов">очки навыков: 4</button>
+   <button type="button" id="опыт"class="b1" title="очки талантов">0/100</button></a><a style="position: absolute;top:0px; right:0px;">
+  <button  left type="button" id="enemy1health" class="b2 ehealth" style="  position:absolute;  top:200px; right: 20px;" title="Здоровье Врага">здоровье врага</button>
+    <button type="button" id="enemy1phisres" class="b2 enemyphisres ephisres" style="  position:absolute;  top:230px; right: 20px;" title="Физ защита Врага">Защита физ</button>
+    <button type="button" id="enemy1mageres" class="b2 enmr"  style="  position:absolute;  top:260px; right: 20px;" title="Маг защита Врага">Защита Маг</button></a></p>
+  <button  left type="button" id="enemy2health" class="b2 ehealth" style="  position:absolute;  top:200px; right: 130px;" title="Здоровье Врага">здоровье врага</button>
+    <button type="button" id="enemy2phisres" class="b2 enemyphisres ephisres" style="  position:absolute;  top:230px; right: 130px;" title="Физ защита Врага">Защита физ</button>
+    <button type="button" id="enemy2mageres" class="b2 enmr"  style="  position:absolute;  top:260px; right: 130px;" title="Маг защита Врага">Защита Маг</button></a></p>
+  <button  left type="button" id="enemy3health" class="b2 ehealth" style="  position:absolute;  top:200px; right: 240px;" title="Здоровье Врага">здоровье врага</button>
+    <button type="button" id="enemy3phisres" class="b2 enemyphisres ephisres" style="  position:absolute;  top:230px; right: 240px;" title="Физ защита Врага">Защита физ</button>
+    <button type="button" id="enemy3mageres" class="b2 enmr"  style="  position:absolute;  top:260px; right: 240px;" title="Маг защита Врага">Защита Маг</button></a></p>
+  <button  left type="button" id="enemy4health" class="b2 ehealth" style="  position:absolute;  top:200px; right: 350px;" title="Здоровье Врага">здоровье врага</button>
+    <button type="button" id="enemy4phisres" class="b2 enemyphisres ephisres" style="  position:absolute;  top:230px; right: 350px;" title="Физ защита Врага">Защита физ</button>
+    <button type="button" id="enemy4mageres" class="b2 enmr"  style="  position:absolute;  top:260px; right: 350px;" title="Маг защита Врага">Защита Маг</button></a></p>
+
+  <a1> Выберете перк: </a1>
+    <button type="button" id="knowledgemage" title="Увеличивает удачу">Звездочёт</button>
+  <button type="button" id="human"title="Повышенная сила">Универсал</button>
+    <button type="button" id="warrior" title="Лечится">Кровавый воин</button>
+  <button type="button" id="necromant"title="Получает души с врагов">Некромант</button></p>
+  <script>
+
+// alert("добро пожаловать в мир крыс");
+
+
+// далее классы
+    </script>
+<button type="button" id="str" title="Большой урон">Сильный удар</button>
+<button type="button" id="deal"title="Случайный урон">Сокрушающий удар</button>
+<button type="button" id="block" title="Спрятаться за щитом">Блок</button>
+<button type="button" id="mageatack" title="Урон от магических знаний">Магический удар</button>
+<button type="button" id="spawnenemies" title="мобы">Вступить в бой</button>
+<button type="button" id="gold" style= " position:absolute;  top:60px; right: 810px; background-color: gold" title="мобы">0 g</button>
+<img id="shop" class="enemypic" src="shop.jpg" title="магазин" 
+style="  position:absolute;  top:30px; right: 630px;"  width="100" height="100" > </p>
+  <script>
+
+    //var name = prompt("Придумайте себе героическое имя!") || "Идиотик";
+    var shieldstack = 0;
+    var constant = 1;
+    var magedmg = (wisdom*4-10+herolevel)*emageres;//0.5 - to random?
+    var herolevel = 1;
+    var lvlpoint=4;
+    var emaxhelth1 = 120;
+  	var ehealth1 = 120;
+    var edmg1 = (10*(herolevel*1.1))+(Math.floor(Math.random()*6));
+  	var strength = 10;
+    var defence = 10;
+    var constitution = 10;
+    var intelligence = 10;    
+    var wisdom = 10;
+    var charisma = 10;
+  	var hdmg = 0; //40-43 (10) 80-113 (20)
+  	var mdmg = ((Math.floor(2*strength+Math.floor(Math.random()*(7*strength))))/(1+shieldstack))*(1-ephisres); //20-90 (10) 40-160 (20)
+  	var maxstamina = (2*intelligence+herolevel);
+    var stamina= maxstamina;
+    var score = 0;
+    var stat = [strength, defence,constitution,intelligence,wisdom,charisma];
+    var crit = ((Math.random()*200)+charisma);
+    var classpick = 1;
+    var knowledgemage = 0;
+    var warrior = 0;
+    var necromant = 0;
+    var human = 0;
+    var maxpotion =3+necromant*2;
+    var potion = 0;
+    var warheal = Math.floor(0.1*(hdmg)*warrior);
+    var staminascr = document.getElementById('stam').innerHTML=stamina+"/"+maxstamina;    
+    var levelscr = document.getElementById('level').innerHTML=herolevel;
+  //  var ehealthscr1 = document.getElementById('enemy1health').innerHTML=ehealth+ "/" +maxehelth1;
+    var emageres = Math.floor(Math.random()*100)/100;
+    var ephisres = Math.floor(Math.random()*100)/100;
+    var heroXP = 0;
+    maxXP = 100;
+
+
+
+  var ehealthdmg = function (type){
+        mobenemy[1]-=type;
+      if (target1 === 1) {        enemy1 = mobenemy;
+document.getElementById('enemy1health').innerHTML=enemy1[1]+ "/" +enemy1[0];}
+else if (target2 === 1) {enemy2 = mobenemy;
+document.getElementById('enemy2health').innerHTML=enemy2[1]+ "/" +enemy2[0];}
+      else if (target3 === 1) { enemy3 = mobenemy;
+document.getElementById('enemy3health').innerHTML=enemy3[1]+ "/" +enemy3[0];}
+      else if (target4 === 1) { enemy4 = mobenemy;
+document.getElementById('enemy4health').innerHTML=enemy4[1]+ "/" +enemy4[0];}
+}
+var charter = ["Сила", "Защита", "Телосложение", "Интеллект", "Мудрость","Удача"]
+for(var i = 0; i<charter.length;i++) {
+var statistic = "";
+var cube = "123456";
+while (statistic.length<4){
+var statistic = statistic + cube[Math.floor(Math.random()*cube.length)];}
+var minimal = Math.min(statistic[0],statistic[1],statistic[2],statistic[3]);
+var uno = statistic[0];
+var dos = statistic[1];
+var tres = statistic[2];
+var quatro = statistic[3];
+var finalstat = ((uno*2+dos*2+tres*2+quatro*2)-minimal*2)/2;
+stat [i] = finalstat;
+console.log(charter[i] + " = " + finalstat);}
+
+strength = stat[0];
+defence = stat[1];
+constitution = stat[2];
+intelligence = stat[3];    
+wisdom = stat[4];
+charisma = stat[5];
+
+    var maxherohealth = ((15*stat[2])+(herolevel*5));
+    var herohealth = maxherohealth;
+    var herohealthscr = document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;
+    document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;
+
+
+
+
+// сильный удар
+    document.getElementById('str').onclick = function(){
+      if (monstcount < 1){alert("Вам нужны противники")} else { if (target1 === 0 && target2 === 0 && target3 === 0 && target4 === 0){alert("вы не выбрали противника")}else{
+if(target1 === 1){mobenemy = enemy1} else if (target2 === 1){mobenemy = enemy2} else if(target3 === 1){mobenemy = enemy3} else if(target4 === 1){mobenemy = enemy4} 
+if (herohealth>=0){
+  //расчёт удара по криту
+crit = ((Math.random()*200)+charisma);
+if (crit>200){ //если крит
+          var audio = new Audio(); 
+  audio.src = "crit.wav";
+  audio.autoplay = true; 
+  hdmg =Math.floor(((4*strength+Math.floor(Math.random()*(3*(strength-9)))))/(1+shieldstack)*(1-mobenemy[3]));
+  hdmg*=2.5;
+  hdmg=rounding(hdmg,1);
+textoutred("Критический удар!");} 
+else {//если не крит
+            var audio = new Audio(); 
+  audio.src = "strike.mp3"; 
+  audio.autoplay = true; 
+  hdmg =Math.floor(((4*strength+Math.floor(Math.random()*(3*(strength-9)))))/(1+shieldstack)*(1-mobenemy[3]));
+  hdmg=rounding(hdmg,1);}
+//расчёт силы удара закончен
+
+      if (mobenemy[1]>hdmg) { //недобил
+ehealthdmg(hdmg);
+    if (warrior>0 && herohealth<=maxherohealth){
+      warheal=(Math.floor(0.1*(hdmg)*warrior))/(1+shieldstack);
+    herohealth+=warheal
+  herohealthscr = document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;} //лайфстил
+    ;
+      if (mobenemy[1]>0) {
+//rolldmg();
+hitbymob = hedmg(mobenemy[2])
+      herohealth-=rounding(((hitbymob)/(1+shieldstack)*(1-0.01*defence)),1); //defence спопротивление
+      textoutred("вам нанесли: "+rounding(((hitbymob)/(1+shieldstack)*(1-0.05*defence)),1))
+      herohealthscr = document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;}
+if (herohealth<0) {alert("๏̯͡๏Ай, как жаль" + " press f5  to start again")}
+
+  } else { if(monstcount<=0){monstcount=0} else {drop+=Math.random()*mobenemy[5]; monstcount--; mobenemy[1]=mobenemy[0]; if (monstcount === 0){loot(); hide(1);hide(2);hide(3);hide(4);} //если моб умер!if(monstcount<=0){monstcount=0} else лишнее
+ if(target1 === 1){hide(1)} else if (target2 === 1){hide(2)} else if(target3 === 1){hide(3)} else if(target4 === 1){hide(4)}resettarget();
+var audio = new Audio();
+audio.src = "die.wav";
+audio.autoplay = true;
+
+
+
+
+
+    if (warrior>0 && herohealth<=maxherohealth){
+      warheal=(Math.floor(0.1*(hdmg)*warrior))/(1+shieldstack);
+    herohealth+=warheal;}
+
+
+}}
+      } else {
+textoutp("Вы умерли и больше не можете сражаться");
+      }
+   }}}
+  </script>
+
+<script>
+//  удар щитом
+    document.getElementById('mageatack').onclick = function(){
+      effect = textus[Math.floor(Math.random()*textus.length)];
+      dodamage = dodamagename[Math.floor(Math.random()*dodamagename.length)];
+                 
+if (herohealth>=0) {
+
+      magedmg =(wisdom*4-10+herolevel)*(1-emageres);
+      magedmg = rounding(magedmg,1);
+      if (ehealth>=magedmg) { if (stamina>5) {
+var audio = new Audio(); 
+  audio.src = "mageshot.wav";
+  audio.autoplay = true; 
+  if (potion<maxpotion) {
+              potion +=Math.round(Math.random()*100)/300;
+              if (potion>maxpotion){potion=maxpotion}
+                              potion = rounding (potion,100);};
+        ehealthdmg(magedmg);
+                    stamina-=5;
+            staminascr = document.getElementById('stam').innerHTML=stamina+"/"+maxstamina;
+edmg = ((10*(herolevel*1.1))+(Math.floor(Math.random()*6)))/(1+shieldstack);
+textoutblue("😎" +name +" "+ dodamage+" крысу на " + magedmg + " урона"+ "! У врага ещё " + ehealth + "hp♠️");
+      herohealth-=Math.floor(edmg*(10/defence));
+      herohealthscr = document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;
+      score += magedmg;
+textoutp(enemyname + effect +" на " + Math.floor(edmg*(10/defence)) + " урона " + "("+ herohealth +"♥) "+(Math.round(potion*100)/100)+"ღ" );
+
+                  if (herohealth<0) {alert("Ай, как жаль" + " press f5  to start again");
+                  score+=herolevel*100;
+                  stat = [strength, defence,constitution,intelligence,wisdom,charisma];
+                          textoutred("Твой результат:" +score);
+      }
+ }else alert("у вас нет маны"); } else { 
+textoutp("😎" +name +" "+ dodamage+" крысу на " + magedmg + " урона"+ " Враг повержен! +"+necromant+"ღ");
+    if(necromant>0){
+    potion++
+    if (potion>maxpotion){potion=maxpotion}
+                potion = rounding (potion,100);;};
+enemyart = Math.floor(Math.random()*bigboi.length);
+enemyname = bigboi[enemyart]; document.getElementById('img').src =pictures[enemyart];
+textoutp("Ты перешёл на новый уровень, защищайся! на тебя напал"+enemyname);
+
+if (magedmg>500) {
+  console.log("nice strike!☠☠☠ + 500pts")
+  score += 500;}
+  else { score += magedmg;}
+          var audio = new Audio(); // Создаём новый элемент Audio
+  audio.src = "die.wav"; // Указываем путь к звуку "клика"
+  audio.autoplay = true; // Автоматически запускаем
+if (Math.floor(herolevel)===7){classpick++;
+enemyart = Math.floor(Math.random()*bigboi.length);
+enemyname = bigboi[enemyart]; document.getElementById('img').src =pictures[enemyart];
+player.innerText =("Ты перешёл на новый уровень, защищайся! на тебя напал"+enemyname);}
+if (Math.floor(herolevel)===10){classpick++
+enemyart = Math.floor(Math.random()*bigboi.length);
+enemyname = bigboi[enemyart]; document.getElementById('img').src =pictures[enemyart];
+player.innerText =("Ты перешёл на новый уровень, защищайся! на тебя напал"+enemyname);;
+};
+maxstamina = (2*intelligence+herolevel);
+stamina = maxstamina;
+staminascr = document.getElementById('stam').innerHTML=stamina+"/"+maxstamina;
+maxherohealth = ((15*stat[2])+(herolevel*5));
+lvlpoint+=2;
+levelscr = document.getElementById('level').innerHTML=herolevel;
+document.getElementById('таланты').innerHTML="очки навыков: " +lvlpoint;
+shieldstack = 0;
+      herohealth = maxherohealth;
+      herohealthscr = document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;
+      }
+      }  else {
+textoutp ("Вы умерли и больше не можете сражаться");
+}}</script>
+  <script>
+// сокрущающий удар
+
+    document.getElementById('deal').onclick = function(){
+}
+  </script>
+
+  <script>
+    // блок восстановление стамины - хп rework this!
+
+    document.getElementById('block').onclick = function(){}
+  </script>
+  <strong id="str1" style="">Сила</strong>
+  <button type="button" id="strength" title="Урон">+</button> 
+  <script>
+    document.getElementById('strength').onclick = function(){
+    
+      // прув силы
+            if (lvlpoint>=1) {
+      lvlpoint--; bit();
+      stat[0]++;
+            setstats();
+      levelscr = document.getElementById('level').innerHTML=herolevel;
+      document.getElementById('таланты').innerHTML="очки навыков: " +lvlpoint;
+textoutgren ("Вы улучшили навык сила на +1 осталось  распределить: " + lvlpoint);
+hdmg = Math.floor(((4*strength+Math.floor(Math.random()*(3*(strength-9)))))/(1+shieldstack)*(1-ephisres));
+mdmg = ((Math.floor(2*strength+Math.floor(Math.random()*(7*strength))))/(1+shieldstack))*(1-ephisres);}
+  else {     alert ("you have no skill point")
+  }
+      }
+  </script>
+  </p><strong id="def1" style="">Защита</strong>
+ <button type="button" id="defence" title=Защита>+</button></p>
+ <script>
+    document.getElementById('defence').onclick = function(){
+      // прув защиты
+            if (lvlpoint>=1) {
+      stat[1]+=1;
+      lvlpoint--; bit();
+      setstats();
+      levelscr = document.getElementById('level').innerHTML=herolevel;
+      document.getElementById('таланты').innerHTML="очки навыков: " +lvlpoint;
+textoutgren("Вы улучшили навык защита на +1 осталось  распределить: " + lvlpoint);
+  }else {
+    alert ("you have no skill point")
+  }
+     } 
+
+
+
+  </script>
+  </p><strong id="con1" style="">Телосложение</strong>
+  <button type="button" id="constitution" title="Здоровье и выносливость">+</button></p>
+<script>
+document.getElementById('constitution').onclick = function(){
+            if (lvlpoint>=1 && herohealth>0) {
+      stat[2]++;
+      maxherohealth = ((15*stat[2])+(herolevel*5))
+      lvlpoint--; bit();
+      setstats();
+      levelscr = document.getElementById('level').innerHTML=herolevel;
+      document.getElementById('таланты').innerHTML="очки навыков: " +lvlpoint;
+textoutgren("Вы улучшили навык телосложение на +1 осталось  распределить: " + lvlpoint);
+maxherohealth = ((15*stat[2])+(herolevel*5));
+     herohealth+=15;
+   herohealthscr = document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;}
+  else {
+    alert ("you have no skill point");
+  }}
+
+
+</script>
+  </p><strong id="int1" style="">Интеллект</strong>
+  <button type="button" id="intelligence" title="Увеличивает запас маны">+</button></p>
+  </p><strong id="wis1" style="">Мудрость</strong>
+  <button type="button" id="wisdom" title="Увеличивает маг урон">+</button></p>
+  </p><strong id="luc1" style="">Удача</strong>
+  <button type="button" id="charisma" title="Шанс крита">+</button></p>
+    <a>На вас надето: </a><a id="itess" style="font-weight: bold;color: red"></a>
+  <script>
+  document.getElementById('charisma').onclick = function(){
+            if (lvlpoint>=1) {
+      stat[5]+=2;
+      lvlpoint--; bit();
+      setstats();
+      levelscr = document.getElementById('level').innerHTML=herolevel;
+      document.getElementById('таланты').innerHTML="очки навыков: " +lvlpoint;
+textoutgren("Вы улучшили навык удача на + 2 осталось  распределить: " + lvlpoint);
+}
+  else {    alert ("you have no skill point")}};
+
+    document.getElementById('wisdom').onclick = function(){
+            if (lvlpoint>=1) {
+      stat[4]++;
+      lvlpoint--; bit();
+      setstats();
+      levelscr = document.getElementById('level').innerHTML=herolevel;
+      document.getElementById('таланты').innerHTML="очки навыков: " +lvlpoint;
+textoutgren("Вы улучшили навык мудрость осталось  распределить: " + lvlpoint);
+}
+  else {    alert ("you have no skill point")}};
+
+  document.getElementById('intelligence').onclick = function(){
+            if (lvlpoint>=1) {
+      stat[3]++;
+      lvlpoint--; bit();
+      setstats(intelligence);
+      levelscr = document.getElementById('level').innerHTML=herolevel;
+      document.getElementById('таланты').innerHTML="очки навыков: " +lvlpoint;
+textoutgren("Вы улучшили Интеллект на +1 осталось  распределить: " + lvlpoint);
+     maxstamina = (2*intelligence+herolevel);
+     stamina = maxstamina;
+     staminascr = document.getElementById('stam').innerHTML=stamina+"/"+maxstamina;}
+  else {
+    alert ("you have no skill point");
+  }}
+</script>
+
+<div id="screen" style="height: 300px; width: 800px; overflow-y: scroll; border: 1px solid black; background-color: white">
+  
+
+</div>
+<script>
+var screen = document.getElementById('screen');
+var monster = document.createElement("div");
+monster.style.color = "green";
+monster.innerText ="У вас есть несколько очки навыков! Осталось  распределить: " + lvlpoint;
+screen.prepend(monster);
+</script>
+<button id="clear">очистить лог</button>
+<script>
+document.getElementById('clear').onclick = function () {
+screen.innerHTML = '';
+} 
+//  работа с классами
+</script>
+<script>
+  document.getElementById('knowledgemage').onclick = function(){
+  if (classpick<1){alert("У вас уже есть класс")}
+    else {
+textoutp("Вы взяли класс Звездочёта")
+stat[5]+=10;
+stat[4]+=3;
+stat[3]+=3;
+classpick--;
+bit();
+setstats();
+knowledgemage++;
+hideclasses();
+    }}
+
+  document.getElementById('human').onclick = function(){
+  if (classpick<1){alert("У вас уже есть класс")}
+    else {
+      skilll= Math.round(Math.random()*herolevel*1.2)+1
+      var game = document.createElement("div");
+game.style.color = "black";
+game.innerText ="Вы взяли класс Универсал и получили +"+skilll+" ко всем характеристикам";
+screen.prepend(game);
+
+herohealth+=15*herolevel;
+classpick--;
+bit();
+stat[0]+=skilll;
+stat[1]+=skilll;
+stat[2]+=skilll;
+stat[3]+=skilll;
+stat[4]+=skilll;
+stat[5]+=skilll;
+maxherohealth = ((15*stat[2])+(herolevel*5));
+document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;
+setstats();
+human++;
+hideclasses();
+    }}
+
+  document.getElementById('warrior').onclick = function(){
+  if (classpick<1){alert("У вас уже есть класс")}
+    else {
+      var game = document.createElement("div");
+game.style.color = "black";
+game.innerText ="Вы взяли класс Воина, теперь ваши атаки вас лечат";
+screen.prepend(game);
+classpick--;
+bit();
+warrior++;
+hideclasses();
+    }}
+
+  document.getElementById('necromant').onclick = function(){
+  if (classpick<1){alert("У вас уже есть класс")}
+    else {
+      var game = document.createElement("div");
+game.style.color = "black";
+game.innerText ="Вы взяли класс Некроманта, теперь вы черпаете души врагов, ваши магические навыки увеличены";
+screen.prepend(game);
+classpick--;
+bit();
+necromant++;
+intelligence+=4;
+wisdom+=4;
+maxpotion=necromant*2+3;
+setstats();
+hideclasses();
+
+    }}
+</script>
+  <script>
+    document.getElementById('spawnenemies').onclick = function(){
+      if (herohealth<0) {
+var player = document.createElement("div");
+textoutred("вы мертвы!")
+    } else if(monstcount <1) {
+      rollquantity()
+        hidemerchant();hidequality();hidetype();
+    } else {textoutred("У вас хватает врагов")
+    }    
+} 
+
+//новая разработка
+var textoute = function (text) {
+  var monster = document.createElement("div");
+  monster.style.color = "black";
+monster.align = "right";
+monster.innerText = text;
+screen.prepend(monster);
+}
+
+var textoutp = function (text) {
+  var player = document.createElement("div");
+  player.style.color = "black";
+player.innerText = text;
+screen.prepend(player);
+}
+var textoutblue = function (text) {
+  var player = document.createElement("div");
+  player.style.color = "blue";
+player.innerText = text;
+screen.prepend(player);
+}
+var textoutred = function (text) {
+  var textoutred = document.createElement("div");
+  textoutred.style.color = "red";
+textoutred.innerText = text;
+screen.prepend(textoutred);}
+
+var rounding = function (number,x) { //100 - 2 знака, 10 1 знак
+number = (Math.floor(number*x))/x;
+return(number);
+};
+
+var textoutgren = function (text) {
+  var textoutgren = document.createElement("div");
+  textoutgren.style.color = "green";
+textoutgren.innerText = text;
+screen.prepend(textoutgren);}
+
+var monst = function (bylo,stanet) { //техфункция получения статов моба в контейнер
+  createmobs();
+  for (var i = 0; i < bylo.length; i++) {
+bylo[i] = stanet[i];}
+}
+
+hedmg = function (x) { asset = Math.floor(1.2*x+Math.floor(Math.random()*x))
+  rounding(asset,1)
+  return(asset)}
+  dog1 = [150,150,20,0.1,0.2,30,"dog1.jpg"]; // [maxhp,hp,dmg,phis,magres,xp,adress]
+  dog2 = [175,175,25,0.15,0.2,45,"dog2.jpg"]; 
+  dog3 = [250,250,32,0.2,0.2,70,"dog3.jpg"]; 
+  gua1 = [170,170,16,0.3,0.1,30,"gua1.jpg"]; 
+  gua2 = [250,250,20,0.3,0.1,45,"gua2.jpg"];
+  gua3 = [320,320,24,0.4,0.1,70,"gua3.jpg"]; 
+  elem1 = [120,120,30,0.1,0.2,30,"elem1.jpg"]; 
+  elem2 = [150,150,40,0.1,0.3,45,"elem2.jpg"]; 
+  elem3 = [220,220,55,0.1,0.4,70,"elem3.jpg"];
+  dog4 = [450,450,50,0.3,0.3,110,"dog4.jpg"];
+  gua4 = [500,500,30,0.45,0.4,110,"gua4.jpg"];
+  elem4 = [370,370,65,0.1,0.5,110,"elem4.jpg"];
+dog5 = [750,750,70,0.4,0.4,150,"dog5.jpg"];
+  gua5 = [800,800,45,0.55,0.4,150,"gua5.jpg"];
+  elem5 = [600,600,85,0.1,0.6,150,"elem5.jpg"];
+      dog6 = [950,950,80,0.45,0.45,160,"dog6.jpg"];
+  gua6 = [1200,800,55,0.6,0.4,160,"gua6.jpg"];
+  elem6 = [600,600,125,0.1,0.65,160,"elem6.jpg"];
+        dog7 = [1950,1950,120,0.65,0.45,300,"dog7.jpg"];
+  gua7 = [2500,2500,65,0.8,0.4,300,"gua7.jpg"];
+  elem7 = [1400,1400,160,0.1,0.8,300,"elem7.jpg"];
+createmobs = function (){
+  dog1 = [150,150,20,0.1,0.2,30,"dog1.jpg"]; // [maxhp,hp,dmg,phis,magres,xp,adress]
+  dog2 = [175,175,25,0.15,0.2,45,"dog2.jpg"]; 
+  dog3 = [250,250,32,0.2,0.2,70,"dog3.jpg"]; 
+  gua1 = [170,170,16,0.3,0.1,30,"gua1.jpg"]; 
+  gua2 = [250,250,20,0.3,0.1,45,"gua2.jpg"];
+  gua3 = [320,320,24,0.4,0.1,70,"gua3.jpg"]; 
+  elem1 = [120,120,30,0.1,0.2,30,"elem1.jpg"]; 
+  elem2 = [150,150,40,0.1,0.3,45,"elem2.jpg"]; 
+  elem3 = [220,220,55,0.1,0.4,70,"elem3.jpg"];
+  dog4 = [450,450,50,0.3,0.3,110,"dog4.jpg"];
+  gua4 = [500,500,30,0.45,0.4,110,"gua4.jpg"];
+  elem4 = [370,370,65,0.1,0.5,110,"elem4.jpg"];
+  dog5 = [750,750,60,0.4,0.4,110,"dog5.jpg"];
+  gua5 = [800,800,45,0.55,0.4,110,"gua5.jpg"];
+  elem5 = [600,600,85,0.1,0.6,110,"elem5.jpg"];
+    dog6 = [950,950,80,0.45,0.45,160,"dog6.jpg"];
+  gua6 = [1200,1200,55,0.6,0.4,160,"gua6.jpg"];
+  elem6 = [600,600,125,0.1,0.65,160,"elem6.jpg"];
+      dog7 = [1950,1950,120,0.65,0.45,300,"dog7.jpg"];
+  gua7 = [2500,2500,65,0.8,0.4,300,"gua7.jpg"];
+  elem7 = [1400,1400,160,0.1,0.8,300,"elem7.jpg"];
+ lvl1 = [dog1, gua1, elem1];
+lvl2 = [dog2, gua2, elem2];
+lvl3 = [dog3, gua3, elem3];
+lvl4 = [dog4, gua4, elem4];
+lvl5 = [dog5, gua5, elem5]
+lvl6 = [dog6, gua6, elem6];
+lvl7 = [dog7, gua7, elem7]}; // [maxhp,hp,dmg,phis,magres,xp,adress]
+
+lvl1 = [dog1, gua1, elem1];
+lvl2 = [dog2, gua2, elem2];
+lvl3 = [dog3, gua3, elem3];
+lvl4 = [dog4, gua4, elem4];
+lvl5 = [dog5, gua5, elem5];
+lvl6 = [dog6, gua6, elem6];
+lvl7 = [dog7, gua7, elem7];
+enemy1 = [0,0,0,0,0,0,0];
+enemy2 = [0,0,0,0,0,0,0];
+enemy3 = [0,0,0,0,0,0,0];
+enemy4 = [0,0,0,0,0,0,0];
+
+
+
+randleng = function (x){ //вспомогательная функция
+return(Math.floor(Math.random()*x))}; 
+ stash = [];
+ rollmob = function (pic){ //тех функция
+  mskill =0;
+  xylo = 0;
+chance=Math.random();
+xylo =chance*chance*herolevel+(0.05*herolevel);
+if (xylo>-1){mskill++}; 
+if (xylo>=1){mskill++};
+if (xylo>2){mskill++};
+if (xylo>3){mskill++}
+if (xylo>4){mskill++}
+if (xylo>5){mskill++}
+if (xylo>6){mskill++}
+if (xylo>7){mskill++}  
+if (mskill > 6){mob1 =lvl7[randleng(3)]}  else if (mskill > 5){mob1 =lvl6[randleng(3)]}  else if (mskill > 4){mob1 =lvl5[randleng(3)]}  else if (mskill > 3){mob1 =lvl4[randleng(3)]}else if (mskill > 2){mob1 =lvl3[randleng(3)]}  else if (mskill > 1){mob1= lvl2[randleng(3)]} else if(mskill>0){mob1=lvl1[randleng(3)]};
+enemytag =mob1;
+document.getElementById(pic).src =enemytag[6];
+return(enemytag);
+}
+ var gold = 0;
+ drop = 0;
+var cheast = 0;
+
+ //lotery = function () {drop=(0+enemy1[5]+enemy2[5]+enemy3[5]+enemy4[5])*Math.random()  return(drop)}
+heroammunition = ["пусто","пусто","пусто","пусто","пусто","пусто","пусто"]
+dropitem = function(rarity) { //выбирает случайный итем для выпадения (техфункция)
+droping = ((rarity[randleng(rarity.length)])[randleng(7)]);
+checkeqiup =confirm("Вы получили предмет: "+droping[8]+ " он заменит: "+ ammunition[droping[7]][8]) 
+//" хотите надеть предмет? он даёт: +"+droping[0]+"силы +"+droping[1]+"защиты +"+droping[2]+"тела +"+droping[3]+"инта +"+droping[4]+"мудры +"+droping[5]+"к удаче и заменит:" +
+if (checkeqiup === true) {textoutgren("you have equiped: "+droping[8])
+  equip(droping);
+} else {textoutgren("Вы продали: "+droping[8]+" за "+droping[6]+" Золота")}
+
+}
+loot = function (){ //определяет тип и качество шмотки, поднимает лвл и золото!
+//lotery();
+drop = rounding(drop,100)
+if (drop>0){cheast++};
+if (drop>30){cheast++};
+if (drop>45){cheast++};
+if (drop>70){cheast++};
+if (drop>100){cheast++};
+if (drop>150){cheast++};
+if (drop>200){cheast++};
+if (drop>300){cheast++};
+if (cheast>7){dropitem(godness)}
+else if (cheast>6){dropitem(legendary)}
+else if (cheast>5){dropitem(resurected)}
+else if (cheast>4){dropitem(epic)}
+else if (cheast>3){dropitem(good)}
+else if (cheast>2){dropitem(medium)}
+else if (cheast>1){dropitem(starting)};
+textoutgren("Вы получили "+drop+" золотых монет");
+heroXP += drop;
+heroXP = rounding(heroXP,100)
+gold+=drop;
+gold=rounding(gold,10);
+document.getElementById('gold').innerHTML=gold+"g";
+drop = 0;
+cheast = 0;
+resettarget()
+document.getElementById('таланты').innerHTML="очки навыков: " +lvlpoint;
+      herohealth = maxherohealth;
+document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;
+      stamina = maxstamina;
+document.getElementById('stam').innerHTML=stamina+"/"+maxstamina;
+checklvlup();
+}
+heroXP = 0;
+ammunition = [0,0,0,0,0,0,0] // [head, gloves, shoulders, armor, weapon, belt,boots]
+//ammunitionhelp = ["helmet", "gloves", "shoulders", "armor", "shword", "pants","boots"]; //[0,1,2,3,4,5,6]
+// ammurarity = ["common","medium","good","epic","resurected","legendary","godness"];
+// ammutype = ["killer","wizzard","rock"]
+
+equip = function(item){ //приплюсовать статы шмотки, отнять если что-то надето
+  if (ammunition[(item[7])] === 0) {
+  for (var i = 0; i < stat.length; i++) {
+stat[i]+=item[i];}
+strength = stat[0];
+defence = stat[1];
+constitution = stat[2];
+intelligence = stat[3];    
+wisdom = stat[4];
+charisma = stat[5];
+setstats();
+ammunition[(item[7])] = item;
+} else {
+    for (var i = 0; i < stat.length; i++) {
+stat[i]-=ammunition[(item[7])][i];}
+for (var i = 0; i < stat.length; i++) {
+stat[i]+=item[i];}
+
+setstats();
+gold+=ammunition[(item[7])][6];
+textoutgren("you have sold you item for:" +ammunition[(item[7])][6] + " gold")
+ammunition[(item[7])] = item;
+}
+heroammunition = [ammunition[0][8],ammunition[1][8],ammunition[2][8],ammunition[3][8],ammunition[4][8],ammunition[5][8],ammunition[6][8]];//инвентарь на вывод
+
+for (var i = 0; i < heroammunition.length; i++) {
+if (ammunition[i][8] === undefined) {heroammunition[i] = ""}} //инвентарь на вывод
+document.getElementById('itess').innerHTML=heroammunition[0]+" "+heroammunition[1]+" "+heroammunition[2]+" "+heroammunition[3]+" "+heroammunition[4]+" "+heroammunition[5]+" "+heroammunition[6];
+
+}
+// items list!
+
+//killer
+// [str,def,const,inte,wisd,charis,goldcount,type(head,armorm,etc), имя] type [head, gloves, shoulders, armor, weapon, belt,boots] = [0,1,2,3,4,5,6]
+kbeginnerhelmet = [0,1,1,0,0,0,30,0,"Начальный шлем убийцы"]; 
+kbeginnergloves = [0,0,1,0,0,0,30,1,"Начальные перчатки убийцы"]; 
+kbeginnershoulders = [0,0,1,0,0,1,30,2,"Начальные наплечники убийцы"]; 
+kbeginnerarmor = [0,2,1,0,0,0,30,3,"Начальная броня убийцы"]; 
+kbegginersword = [2,0,0,0,0,0,30,4,"Начальный топор убийцы"]; 
+kbeginnerpants = [0,1,2,0,0,0,30,5,"Начальные поножи убийцы"]; 
+kbeginnerboots = [0,0,0,1,0,2,30,6,"Начальные сапоги убийцы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+kmediumhelmet = [0,2,2,0,0,1,50,0,"Посеребренный шлем убийцы"]; 
+kmediumgloves = [0,0,2,0,0,1,50,1,"Посеребренные перчатки убийцы"]; 
+kmediumshoulders = [0,0,2,0,0,2,50,2,"Посеребренные наплечники убийцы"]; 
+kmediumarmor = [0,2,2,0,0,1,50,3,"Посеребренная броня убийцы"]; 
+kwoodensword = [3,1,0,0,0,1,50,4,"Посеребренный топор убийцы"]; 
+kmediumpants = [0,2,3,0,0,1,50,5,"Посеребренные поножи убийцы"]; 
+kmediumboots = [0,0,0,2,0,3,50,6,"Посеребренные сапоги убийцы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+kgoodhelmet = [0,3,3,1,0,2,80,0,"Позолоченный шлем убийцы"]; 
+kgoodgloves = [0,0,3,0,0,2,80,1,"Позолоченные перчатки убийцы"]; 
+kgoodshoulders = [0,0,3,1,0,3,80,2,"Позолоченные наплечники убийцы"]; 
+kgoodarmor = [0,4,4,0,0,2,80,3,"Позолоченная броня убийцы"]; 
+kgoodsword = [5,2,0,0,0,2,80,4,"Позолоченный топор убийцы"]; 
+kgoodpants = [0,4,5,0,0,2,80,5,"Позолоченные поножи убийцы"]; 
+kgoodboots = [0,0,0,3,0,4,80,6,"Позолоченные сапоги убийцы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+kepichelmet = [1,4,4,2,0,4,150,0,"Изумрудный шлем убийцы"]; 
+kepicgloves = [1,0,5,0,0,4,150,1,"Изумрудные перчатки убийцы"]; 
+kepicshoulders = [0,0,4,1,0,6,150,2,"Изумрудные наплечники убийцы"]; 
+kepicarmor = [1,6,5,0,0,4,150,3,"Изумрудная броня убийцы"]; 
+kepicsword = [8,3,0,0,0,4,150,4,"Изумрудный топор убийцы"]; 
+kepicpants = [0,5,6,0,0,4,150,5,"Изумрудные поножи убийцы"]; 
+kepicboots = [0,1,0,4,0,4,150,6,"Изумрудные сапоги убийцы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+kresurectedhelmet = [2,5,5,3,0,6,220,0,"Запрещённый шлем убийцы"]; 
+kresurectedgloves = [2,0,6,0,0,6,220,1,"Запрещённые перчатки убийцы"]; 
+kresurectedshoulders = [0,0,5,2,0,6,220,2,"Запрещённые наплечник убийцы"]; 
+kresurectedarmor = [2,8,7,0,0,6,220,3,"Запрещённая броня убийцы"]; 
+kresurectedsword = [10,4,0,0,0,6,220,4,"Запрещённый топор убийцы"]; 
+kresurectedpants = [0,7,8,0,0,6,220,5,"Запрещённые поножи убийцы"]; 
+kresurectedboots = [0,2,0,6,0,6,220,6,"Запрещённые сапоги убийцы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+klegendaryhelmet = [4,7,7,5,0,10,300,0,"Легендарный шлем убийцы"]; 
+klegendarygloves = [4,2,9,0,0,10,300,1,"Легендарные перчатки убийцы"]; 
+klegendaryshoulders = [0,0,8,0,0,10,300,2,"Легендарные наплечники убийцы"]; 
+klegendaryarmor = [4,10,9,0,0,10,300,3,"Легендарная броня убийцы"]; 
+klegendarysword = [14,6,0,0,0,10,300,4,"Легендарный топор убийцы"]; 
+klegendarypants = [2,9,10,0,0,10,300,5,"Легендарные поножи убийцы"]; 
+klegendaryboots = [0,4,0,8,0,10,300,6,"Легендарные сапоги убийцы"]; 
+// [str,def,const,inte,wisd,charis,goldcount] 
+kgodnesshelmet = [7,10,10,8,2,15,450,0,"Божественный шлем убийцы"]; 
+kgodnessgloves = [7,4,12,1,2,15,450,1,"Божественные перчатки убийцы"]; 
+kgodnessshoulders = [2,0,12,2,2,15,450,2,"Божественные наплечники убийцы"]; 
+kgodnessarmor = [8,15,15,2,2,15,450,3,"Божественная броня убийцы"]; 
+kgodnesssword = [20,10,2,0,0,15,450,4,"Божественный топор убийцы"]; 
+kgodnesspants = [4,15,15,2,2,15,450,5,"Божественные поножи убийцы"]; 
+kgodnessboots = [2,6,2,10,2,15,450,6,"Божественные сапоги убийцы"]; 
+
+// wizzard
+// [str,def,const,inte,wisd,charis,goldcount]
+wbeginnerhelmet = [0,0,1,1,1,0,30,0,"Начальная шляпа волшебника"]; 
+wbeginnergloves = [0,0,0,2,1,0,30,1,"Начальные перчатки волшебника"]; 
+wbeginnershoulders = [0,0,1,2,0,1,30,2,"Начальные наплечники волшебника"]; 
+wbeginnerarmor = [0,0,2,1,1,0,30,3,"Начальная мантия волшебника"]; 
+wbegginersword = [1,0,0,1,3,0,30,4,"Начальный посох волшебника"]; 
+wbeginnerpants = [0,0,1,2,2,0,30,5,"Начальные поножи волшебника"]; 
+wbeginnerboots = [0,0,0,2,2,0,30,6,"Начальные сапоги волшебника"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+wmediumhelmet = [0,1,1,2,1,0,50,0,"Посеребренная шляпа волшебника"]; 
+wmediumgloves = [0,0,1,1,2,0,50,1,"Посеребренные перчатки волшебника"]; 
+wmediumshoulders = [0,1,0,2,1,0,50,2,"Посеребренные наплечники волшебника"]; 
+wmediumarmor = [0,1,2,1,2,0,50,3,"Посеребренная мантия волшебника"]; 
+wwoodensword = [0,0,0,1,4,0,50,4,"Посеребренный посох волшебника"]; 
+wmediumpants = [0,2,1,3,2,0,50,5,"Посеребренные поножи волшебника"]; 
+wmediumboots = [0,0,0,3,3,0,50,6,"Посеребренные сапоги волшебника"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+wgoodhelmet = [0,2,2,3,2,0,80,0,"Позолоченная шляпа волшебника"]; 
+wgoodgloves = [0,0,2,2,3,0,80,1,"Позолоченные перчатки волшебника"]; 
+wgoodshoulders = [0,1,0,3,2,0,80,2,"Позолоченные наплечники волшебника"]; 
+wgoodarmor = [0,2,2,2,3,0,80,3,"Позолоченная мантия волшебника"]; 
+wgoodsword = [1,0,0,2,6,0,80,4,"Позолоченный посох волшебника"]; 
+wgoodpants = [0,2,2,4,3,0,80,5,"Позолоченные поножи волшебника"]; 
+wgoodboots = [0,0,0,4,4,0,80,6,"Позолоченные сапоги волшебника"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+wepichelmet = [0,2,2,4,3,0,150,0,"Изумрудная шляпа волшебника"]; 
+wepicgloves = [0,0,3,3,4,0,150,1,"Изумрудные перчатки волшебника"]; 
+wepicshoulders = [0,2,0,4,3,0,150,2,"Изумрудные наплечники волшебника"]; 
+wepicarmor = [0,3,3,3,4,0,150,3,"Изумрудная мантия волшебника"]; 
+wepicsword = [2,0,0,4,7,0,150,4,"Изумрудный посох волшебника"]; 
+wepicpants = [0,2,1,5,4,0,150,5,"Изумрудные поножи волшебника"]; 
+wepicboots = [0,0,0,6,6,0,150,6,"Изумрудные сапоги волшебника"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+wresurectedhelmet = [1,3,3,5,5,0,220,0,"Запрещённая шляпа волшебника"]; 
+wresurectedgloves = [1,1,3,4,5,0,220,1,"Запрещённые перчатки волшебника"]; 
+wresurectedshoulders = [0,3,1,5,4,0,220,2,"Запрещённые наплечник волшебника"]; 
+wresurectedarmor = [0,4,4,4,5,0,220,3,"Запрещённая мантия волшебника"]; 
+wresurectedsword = [2,0,0,5,9,0,220,4,"Запрещённый посох волшебника"]; 
+wresurectedpants = [0,3,1,6,5,0,220,5,"Запрещённые поножи волшебника"]; 
+wresurectedboots = [0,1,0,8,8,0,220,6,"Запрещённые сапоги волшебника"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+wlegendaryhelmet = [1,4,5,8,8,2,300,0,"Легендарная шляпа волшебника"]; 
+wlegendarygloves = [2,2,4,6,7,3,300,1,"Легендарные перчатки волшебника"]; 
+wlegendaryshoulders = [1,4,2,7,6,2,300,2,"Легендарные наплечники волшебника"]; 
+wlegendaryarmor = [1,6,4,7,8,2,300,3,"Легендарная мантия волшебника"]; 
+wlegendarysword = [3,1,1,8,14,3,300,4,"Легендарный посох волшебника"]; 
+wlegendarypants = [0,4,1,8,7,3,300,5,"Легендарные поножи волшебника"]; 
+wlegendaryboots = [0,2,1,10,10,3,300,6,"Легендарные сапоги волшебника"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+wgodnesshelmet = [3,5,5,15,13,5,450,0,"Божественная шляпа волшебника"]; 
+wgodnessgloves = [3,3,5,9,10,5,450,1,"Божественные перчатки волшебника"]; 
+wgodnessshoulders = [2,5,3,10,12,5,450,2,"Божественные наплечники волшебника"]; 
+wgodnessarmor = [1,8,6,10,12,5,450,3,"Божественная мантия волшебника"]; 
+wgodnesssword = [4,2,2,12,20,5,450,4,"Божественный посох волшебника"]; 
+wgodnesspants = [1,5,3,12,10,5,450,5,"Божественные поножи волшебника"]; 
+wgodnessboots = [2,4,2,15,15,5,450,6,"Божественные сапоги волшебника"]; 
+
+//rock
+// [str,def,const,inte,wisd,charis,goldcount]
+rbeginnerhelmet = [0,2,1,0,0,0,30,0,"Начальный шлем скалы"]; 
+rbeginnergloves = [0,1,1,0,0,0,30,1,"Начальные перчатки скалы"]; 
+rbeginnershoulders = [0,1,0,1,0,0,30,2,"Начальные наплечники скалы"]; 
+rbeginnerarmor = [0,3,1,0,0,0,30,3,"Начальная броня скалы"]; 
+rbegginersword = [1,2,0,0,0,0,30,4,"Начальный кастет и щит скалы"]; 
+rbeginnerpants = [0,1,2,0,0,0,30,5,"Начальные поножи скалы"]; 
+rbeginnerboots = [0,1,0,0,0,3,30,6,"Начальные сапоги скалы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+rmediumhelmet = [0,3,2,0,0,1,50,0,"Посеребренный шлем скалы"]; 
+rmediumgloves = [0,2,1,0,0,0,50,1,"Посеребренные перчатки скалы"]; 
+rmediumshoulders = [0,1,2,0,0,0,50,2,"Посеребренные наплечники скалы"]; 
+rmediumarmor = [0,4,1,0,0,0,50,3,"Посеребренная броня скалы"]; 
+rwoodensword = [1,3,1,0,0,0,50,4,"Посеребренный кастет и щит скалы"]; 
+rmediumpants = [0,2,3,0,0,0,50,5,"Посеребренные поножи скалы"]; 
+rmediumboots = [0,1,1,0,0,5,50,6,"Посеребренные сапоги скалы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+rgoodhelmet = [0,4,3,1,0,3,80,0,"Позолоченный шлем скалы"]; 
+rgoodgloves = [0,3,2,0,0,0,80,1,"Позолоченные перчатки скалы"]; 
+rgoodshoulders = [0,2,3,0,0,0,80,2,"Позолоченные наплечники скалы"]; 
+rgoodarmor = [1,5,3,0,0,0,80,3,"Позолоченная броня скалы"]; 
+rgoodsword = [2,4,1,0,0,0,80,4,"Позолоченный кастет и щит скалы"]; 
+rgoodpants = [0,3,4,0,0,0,80,5,"Позолоченные поножи скалы"]; 
+rgoodboots = [0,2,1,0,0,6,80,6,"Позолоченные сапоги скалы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+repichelmet = [0,6,4,2,1,5,150,0,"Изумрудный шлем скалы"]; 
+repicgloves = [0,4,3,0,0,0,150,1,"Изумрудные перчатки скалы"]; 
+repicshoulders = [0,3,4,0,0,0,150,2,"Изумрудные наплечники скалы"]; 
+repicarmor = [1,7,5,0,0,0,150,3,"Изумрудная броня скалы"]; 
+repicsword = [4,6,2,0,0,0,150,4,"Изумрудный кастет и щит скалы"]; 
+repicpants = [0,4,5,0,0,0,150,5,"Изумрудные поножи скалы"]; 
+repicboots = [0,3,2,0,0,8,150,6,"Изумрудные сапоги скалы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+rresurectedhelmet = [1,8,6,0,0,8,220,0,"Запрещённый шлем скалы"]; 
+rresurectedgloves = [1,5,4,0,0,0,220,1,"Запрещённые перчатки скалы"]; 
+rresurectedshoulders = [1,4,5,0,0,0,220,2,"Запрещённые наплечник скалы"]; 
+rresurectedarmor = [2,10,8,0,0,0,220,3,"Запрещённая броня скалы"]; 
+rresurectedsword = [5,8,4,0,0,0,220,4,"Запрещённый кастет и щит скалы"]; 
+rresurectedpants = [1,6,6,0,0,0,220,5,"Запрещённые поножи скалы"]; 
+rresurectedboots = [0,4,4,0,0,10,220,6,"Запрещённые сапоги скалы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+rlegendaryhelmet = [1,10,8,1,1,10,300,0,"Легендарный шлем скалы"]; 
+rlegendarygloves = [1,7,6,1,1,5,300,1,"Легендарные перчатки скалы"]; 
+rlegendaryshoulders = [2,6,7,1,1,5,300,2,"Легендарные наплечники скалы"]; 
+rlegendaryarmor = [3,14,10,1,1,5,300,3,"Легендарная броня скалы"]; 
+rlegendarysword = [7,10,6,1,1,5,300,4,"Легендарный кастет и щит скалы"]; 
+rlegendarypants = [2,8,8,1,1,5,300,5,"Легендарные поножи скалы"]; 
+rlegendaryboots = [1,5,6,1,1,13,300,6,"Легендарные сапоги скалы"]; 
+// [str,def,const,inte,wisd,charis,goldcount]
+rgodnesshelmet = [3,15,12,3,3,12,450,0,"Божественный шлем скалы"]; 
+rgodnessgloves = [2,10,8,3,3,8,450,1,"Божественные перчатки скалы"]; 
+rgodnessshoulders = [3,8,10,3,3,8,450,2,"Божественные наплечники скалы"]; 
+rgodnessarmor = [4,20,15,3,3,8,450,3,"Божественная броня скалы"]; 
+rgodnesssword = [9,15,8,3,3,8,450,4,"Божественный кастет и щит скалы"]; 
+rgodnesspants = [3,12,12,3,3,8,450,5,"Божественные поножи скалы"]; 
+rgodnessboots = [2,7,8,3,3,15,450,6,"Божественные сапоги скалы"]; 
+
+
+// items list!
+// killer
+kstarting = [kbeginnerhelmet,kbeginnergloves,kbeginnershoulders,kbeginnerarmor,kbegginersword,kbeginnerpants,kbeginnerboots];
+kmedium = [kmediumhelmet,kmediumgloves,kmediumshoulders,kmediumarmor,kwoodensword,kmediumpants,kmediumboots];
+kgood = [kgoodhelmet,kgoodgloves,kgoodshoulders,kgoodarmor,kgoodsword,kgoodpants,kgoodboots];
+kepic = [kepichelmet,kepicgloves,kepicshoulders,kepicarmor,kepicsword,kepicpants,kepicboots];
+kresurected = [kresurectedhelmet,kresurectedgloves,kresurectedshoulders,kresurectedarmor,kresurectedsword,kresurectedpants,kresurectedboots];
+klegendary = [klegendaryhelmet,klegendarygloves,klegendaryshoulders,klegendaryarmor,klegendarysword,klegendarypants,klegendaryboots];
+kgodness = [kgodnesshelmet,kgodnessgloves,kgodnessshoulders,kgodnessarmor,kgodnesssword,kgodnesspants,kgodnessboots];
+// items list!
+// wizzard
+wstarting = [wbeginnerhelmet,wbeginnergloves,wbeginnershoulders,wbeginnerarmor,wbegginersword,wbeginnerpants,wbeginnerboots];
+wmedium = [wmediumhelmet,wmediumgloves,wmediumshoulders,wmediumarmor,wwoodensword,wmediumpants,wmediumboots];
+wgood = [wgoodhelmet,wgoodgloves,wgoodshoulders,wgoodarmor,wgoodsword,wgoodpants,wgoodboots];
+wepic = [wepichelmet,wepicgloves,wepicshoulders,wepicarmor,wepicsword,wepicpants,wepicboots];
+wresurected = [wresurectedhelmet,wresurectedgloves,wresurectedshoulders,wresurectedarmor,wresurectedsword,wresurectedpants,wresurectedboots];
+wlegendary = [wlegendaryhelmet,wlegendarygloves,wlegendaryshoulders,wlegendaryarmor,wlegendarysword,wlegendarypants,wlegendaryboots];
+wgodness = [wgodnesshelmet,wgodnessgloves,wgodnessshoulders,wgodnessarmor,wgodnesssword,wgodnesspants,wgodnessboots];
+// items list!
+// rock
+rstarting = [rbeginnerhelmet,rbeginnergloves,rbeginnershoulders,rbeginnerarmor,rbegginersword,rbeginnerpants,rbeginnerboots];
+rmedium = [rmediumhelmet,rmediumgloves,rmediumshoulders,rmediumarmor,rwoodensword,rmediumpants,rmediumboots];
+rgood = [rgoodhelmet,rgoodgloves,rgoodshoulders,rgoodarmor,rgoodsword,rgoodpants,rgoodboots];
+repic = [repichelmet,repicgloves,repicshoulders,repicarmor,repicsword,repicpants,repicboots];
+rresurected = [rresurectedhelmet,rresurectedgloves,rresurectedshoulders,rresurectedarmor,rresurectedsword,rresurectedpants,rresurectedboots];
+rlegendary = [rlegendaryhelmet,rlegendarygloves,rlegendaryshoulders,rlegendaryarmor,rlegendarysword,rlegendarypants,rlegendaryboots];
+rgodness = [rgodnesshelmet,rgodnessgloves,rgodnessshoulders,rgodnessarmor,rgodnesssword,rgodnesspants,rgodnessboots];
+
+starting=[kstarting,wstarting,rstarting];
+medium = [kmedium,wmedium,rmedium];
+good = [kgood,wgood,rgood];
+epic = [kepic,wepic,repic];
+resurected = [kresurected,wresurected,rresurected];
+legendary = [klegendary,wlegendary,rlegendary];
+godness = [kgodness,wgodness,rgodness]
+
+kachestvo =[starting,medium,good,epic,resurected,legendary,godness]
+
+
+
+var monstcount = 0;
+
+
+show = function (setelement){
+  if (setelement === 1){
+    $(document.getElementById('enemy1phisres')).fadeIn(1000)
+  $(document.getElementById('enemy1phisres')).fadeIn(1000);
+  $(document.getElementById('enemy1mageres')).fadeIn(1000);
+$(document.getElementById('enemy1health')).fadeIn(1000);
+$(document.getElementById('enemy1')).fadeIn(1000);}
+  if (setelement === 2){
+    $(document.getElementById('enemy2phisres')).fadeIn(1000)
+  $(document.getElementById('enemy2phisres')).fadeIn(1000);
+  $(document.getElementById('enemy2mageres')).fadeIn(1000);
+$(document.getElementById('enemy2health')).fadeIn(1000);
+$(document.getElementById('enemy2')).fadeIn(1000);}
+if (setelement === 3) {
+    $(document.getElementById('enemy3phisres')).fadeIn(1000)
+  $(document.getElementById('enemy3phisres')).fadeIn(1000);
+  $(document.getElementById('enemy3mageres')).fadeIn(1000);
+$(document.getElementById('enemy3health')).fadeIn(1000);
+$(document.getElementById('enemy3')).fadeIn(1000);}
+  if (setelement === 4){
+    $(document.getElementById('enemy4phisres')).fadeIn(1000)
+  $(document.getElementById('enemy4phisres')).fadeIn(1000);
+  $(document.getElementById('enemy4mageres')).fadeIn(1000);
+$(document.getElementById('enemy4health')).fadeIn(1000);
+$(document.getElementById('enemy4')).fadeIn(1000);}}
+
+
+hide = function (setelement){
+  if (setelement === 1){
+    $(document.getElementById('enemy1phisres')).fadeOut(1000)
+  $(document.getElementById('enemy1phisres')).fadeOut(1000);
+  $(document.getElementById('enemy1mageres')).fadeOut(1000);
+$(document.getElementById('enemy1health')).fadeOut(1000);
+$(document.getElementById('enemy1')).fadeOut(1000);}
+  if (setelement === 2){
+    $(document.getElementById('enemy2phisres')).fadeOut(1000)
+  $(document.getElementById('enemy2phisres')).fadeOut(1000);
+  $(document.getElementById('enemy2mageres')).fadeOut(1000);
+$(document.getElementById('enemy2health')).fadeOut(1000);
+$(document.getElementById('enemy2')).fadeOut(1000);}
+if (setelement === 3) {
+    $(document.getElementById('enemy3phisres')).fadeOut(1000)
+  $(document.getElementById('enemy3phisres')).fadeOut(1000);
+  $(document.getElementById('enemy3mageres')).fadeOut(1000);
+$(document.getElementById('enemy3health')).fadeOut(1000);
+$(document.getElementById('enemy3')).fadeOut(1000);}
+  if (setelement === 4){
+    $(document.getElementById('enemy4phisres')).fadeOut(1000)
+  $(document.getElementById('enemy4phisres')).fadeOut(1000);
+  $(document.getElementById('enemy4mageres')).fadeOut(1000);
+$(document.getElementById('enemy4health')).fadeOut(1000);
+$(document.getElementById('enemy4')).fadeOut(1000);}}
+
+
+
+
+
+
+rollquantity = function() {
+chance=Math.random();
+randomizator =chance*chance*herolevel-(0.05*herolevel);
+if (randomizator>-3){enemy1=rollmob("enemy1"); monstcount++  // [maxhp,hp,dmg,phis,magres,xp,adress]
+emaxhelth1=enemy1[0]; 
+ehealth1= enemy1[1]; document.getElementById('enemy1health').innerHTML=ehealth1+"/"+emaxhelth1;
+edmg1 = enemy1[2]; 
+ephisres1 = enemy1[3]; document.getElementById('enemy1phisres').innerHTML=ephisres1;
+emageres1 = enemy1[4]; document.getElementById('enemy1mageres').innerHTML=emageres1;
+show(1);}
+if (randomizator>0.05){enemy2=rollmob("enemy2"); monstcount++
+emaxhelth2=enemy2[0]; 
+ehealth2= enemy2[1]; document.getElementById('enemy2health').innerHTML=ehealth2+"/"+emaxhelth2;
+edmg2 = enemy2[2]; 
+ephisres2 = enemy2[3]; document.getElementById('enemy2phisres').innerHTML=ephisres2;
+emageres2 = enemy2[4]; document.getElementById('enemy2mageres').innerHTML=emageres2;
+show(2);}
+if (randomizator>1){enemy3=rollmob("enemy3"); monstcount++
+emaxhelth3=enemy3[0]; 
+ehealth3= enemy3[1]; document.getElementById('enemy3health').innerHTML=ehealth3+"/"+emaxhelth3;
+edmg3 = enemy3[2]; 
+ephisres3 = enemy3[3]; document.getElementById('enemy3phisres').innerHTML=ephisres3;
+emageres3 = enemy3[4]; document.getElementById('enemy3mageres').innerHTML=emageres3;
+show(3);}
+if (randomizator>2){enemy4=rollmob("enemy4"); monstcount++
+emaxhelth4=enemy4[0]; 
+ehealth4= enemy4[1]; document.getElementById('enemy4health').innerHTML=ehealth4+"/"+emaxhelth4;
+edmg4 = enemy4[2]; 
+ephisres4 = enemy4[3]; document.getElementById('enemy4phisres').innerHTML=ephisres4;
+emageres4 = enemy4[4]; document.getElementById('enemy4mageres').innerHTML=emageres4;
+show(4);}
+if (randomizator<0.05) {
+  hide(4);hide(3);hide(2);}else if (randomizator<1) {
+  hide(4);hide(3);}else if (randomizator<2) {
+  hide(4);}
+  createmobs();
+  return(randomizator);
+
+}
+lvlup = function () {
+          audio = new Audio(); 
+  audio.src = "lvlup.wav";
+  audio.autoplay = true; 
+showclasses();
+herolevel++; 
+classpick++; 
+lvlpoint+=4; 
+levelscr = document.getElementById('level').innerHTML=herolevel;
+document.getElementById('таланты').innerHTML="очки навыков: " +lvlpoint;
+      herohealth = maxherohealth;
+      herohealthscr = document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;
+      stamina = maxstamina;
+    staminascr = document.getElementById('stam').innerHTML=stamina+"/"+maxstamina;
+}
+
+checklvlup = function(){
+    if (heroXP >=maxXP && herolevel<herolevel+1) {maxXP =100*(herolevel+1)*(herolevel+1);  lvlup()}
+document.getElementById('опыт').innerHTML=heroXP+"/"+maxXP;      }  
+
+
+
+hideclasses = function () {
+    $(document.getElementById('knowledgemage')).fadeOut(100);
+$(document.getElementById('human')).fadeOut(100);
+$(document.getElementById('warrior')).fadeOut(100);
+  $(document.getElementById('necromant')).fadeOut(100);
+$("a1").fadeOut(100)}
+showclasses = function () {
+    $(document.getElementById('knowledgemage')).fadeIn(100);
+$(document.getElementById('human')).fadeIn(100);
+$(document.getElementById('warrior')).fadeIn(100);
+  $(document.getElementById('necromant')).fadeIn(100);
+$("a1").fadeIn(100)}
+resettarget = function (){
+target1=0;
+target2=0;
+target3=0;
+target4=0;
+document.getElementById('enemy1').style.borderColor = "black";
+document.getElementById('enemy2').style.borderColor = "black";
+document.getElementById('enemy3').style.borderColor = "black";
+document.getElementById('enemy4').style.borderColor = "black";
+}
+resettarget()
+    </script>
+
+
+  </body>
+</html>
+  <script>
+if((0+stat[0]+stat[1]+stat[2]+stat[3]+stat[4]+stat[5])<70){
+  result ="слабый старт";
+} else if((0+stat[0]+stat[1]+stat[2]+stat[3]+stat[4]+stat[5])<75){
+  result ="нормальные статы";
+} else if((0+stat[0]+stat[1]+stat[2]+stat[3]+stat[4]+stat[5])<80){
+  result ="ХОРОШИЕ СТАТЫ!";
+} else {
+  result ="У ВАС СТАТЫ БОГА!";
+}
+textoutred("Твои Характеристики:"+result);
+var setstats = function (incrstat) {
+incrstat++;
+  strength = stat[0];
+defence = stat[1];
+constitution = stat[2];
+intelligence = stat[3];    
+wisdom = stat[4];
+charisma = stat[5];
+maxherohealth = ((15*stat[2])+(herolevel*5))
+document.getElementById('health').innerHTML=herohealth+"/"+maxherohealth;
+document.getElementById('str1').innerHTML="Сила = "+ strength;
+document.getElementById('def1').innerHTML=("Защита = "+ defence);
+document.getElementById('con1').innerHTML=("Телосложение = "+ constitution);
+document.getElementById('int1').innerHTML=("Интеллект = "+ intelligence);
+document.getElementById('wis1').innerHTML=("Мудрость = "+ wisdom);
+document.getElementById('luc1').innerHTML=("Удача = "+ charisma)}
+setstats();
+
+          var bit = function(){
+          audio = new Audio(); 
+  audio.src = "plus.wav";
+  audio.autoplay = true; }
+
+
+document.getElementById('enemy1').onclick = function(){
+target1=1;
+target2=0;
+target3=0;
+target4=0;
+document.getElementById('enemy1').style.borderColor = "red";
+document.getElementById('enemy2').style.borderColor = "black";
+document.getElementById('enemy3').style.borderColor = "black";
+document.getElementById('enemy4').style.borderColor = "black";}
+document.getElementById('enemy2').onclick = function(){
+target1=0;
+target2=1;
+target3=0;
+target4=0;
+document.getElementById('enemy2').style.borderColor = "red";
+document.getElementById('enemy1').style.borderColor = "black";
+document.getElementById('enemy3').style.borderColor = "black";
+document.getElementById('enemy4').style.borderColor = "black";}
+document.getElementById('enemy3').onclick = function(){
+target1=0;
+target2=0;
+target3=1;
+target4=0;
+document.getElementById('enemy3').style.borderColor = "red";
+document.getElementById('enemy1').style.borderColor = "black";
+document.getElementById('enemy2').style.borderColor = "black";
+document.getElementById('enemy4').style.borderColor = "black";}
+document.getElementById('enemy4').onclick = function(){
+target1=0;
+target2=0;
+target3=0;
+target4=1;
+document.getElementById('enemy4').style.borderColor = "red";
+document.getElementById('enemy1').style.borderColor = "black";
+document.getElementById('enemy3').style.borderColor = "black";
+document.getElementById('enemy2').style.borderColor = "black";}
+
+
+rollquantity()
+showmerchant = function(){  
+  $(document.getElementById('шлем')).fadeIn(100);
+$(document.getElementById('плечи')).fadeIn(100);
+$(document.getElementById('руки')).fadeIn(100);
+$(document.getElementById('броня')).fadeIn(100);
+$(document.getElementById('оружие')).fadeIn(100);
+$(document.getElementById('поножи')).fadeIn(100);
+$(document.getElementById('ботинки')).fadeIn(100);
+}
+hidemerchant = function()  {
+  $(document.getElementById('шлем')).fadeOut(100);
+$(document.getElementById('плечи')).fadeOut(100);
+$(document.getElementById('руки')).fadeOut(100);
+$(document.getElementById('броня')).fadeOut(100);
+$(document.getElementById('оружие')).fadeOut(100);
+$(document.getElementById('поножи')).fadeOut(100);
+$(document.getElementById('ботинки')).fadeOut(100);
+}
+
+var mecrshown = 1;
+showquality = function(){
+$(document.getElementById('starting')).fadeIn(100);
+$(document.getElementById('medium')).fadeIn(100);
+$(document.getElementById('good')).fadeIn(100);
+$(document.getElementById('epic')).fadeIn(100);
+$(document.getElementById('resurrected')).fadeIn(100);
+$(document.getElementById('legendary')).fadeIn(100);
+$(document.getElementById('godness')).fadeIn(100);
+}
+hidequality = function(){
+$(document.getElementById('starting')).fadeOut(100);
+$(document.getElementById('medium')).fadeOut(100);
+$(document.getElementById('good')).fadeOut(100);
+$(document.getElementById('epic')).fadeOut(100);
+$(document.getElementById('resurrected')).fadeOut(100);
+$(document.getElementById('legendary')).fadeOut(100);
+$(document.getElementById('godness')).fadeOut(100);
+}
+hidequality();
+document.getElementById('shop').onclick = function(){ 
+  if(monstcount === 0) {
+if(mecrshown === 1) {mecrshown--; showmerchant()} else {hidemerchant();hidequality();hidetype(); mecrshown++} } else alert("нельзя закупаться в бою!")}
+hidemerchant();
+
+document.getElementById('шлем').onclick = function(){
+hidemerchant();
+showquality();
+buy = 0;
+}
+document.getElementById('плечи').onclick = function(){
+hidemerchant();
+showquality();
+buy = 1;
+}
+document.getElementById('руки').onclick = function(){
+hidemerchant();
+showquality();
+buy = 2;
+}
+document.getElementById('броня').onclick = function(){
+hidemerchant();
+showquality();
+buy = 3;
+}
+document.getElementById('оружие').onclick = function(){
+hidemerchant();
+showquality();
+buy = 4;
+}
+document.getElementById('поножи').onclick = function(){
+hidemerchant();
+showquality();
+buy = 5;
+}
+document.getElementById('ботинки').onclick = function(){
+hidemerchant();
+showquality();
+buy = 6;
+}
+showtype = function(){
+   $(document.getElementById('killer')).fadeIn(100);
+$(document.getElementById('wizzard')).fadeIn(100);
+$(document.getElementById('rock')).fadeIn(100); 
+}
+hidetype = function(){
+   $(document.getElementById('killer')).fadeOut(100);
+$(document.getElementById('wizzard')).fadeOut(100);
+$(document.getElementById('rock')).fadeOut(100); 
+}
+hidetype();
+document.getElementById('starting').onclick = function(){
+hidequality();
+showtype();
+secbuy = 0;
+}
+document.getElementById('medium').onclick = function(){
+hidequality();
+showtype();
+secbuy = 1;
+}
+document.getElementById('good').onclick = function(){
+hidequality();
+showtype();
+secbuy = 2;
+}
+document.getElementById('epic').onclick = function(){
+hidequality();
+showtype();
+secbuy = 3;
+}
+document.getElementById('resurrected').onclick = function(){
+hidequality();
+showtype();
+secbuy = 4;
+}
+document.getElementById('legendary').onclick = function(){
+hidequality();
+showtype();
+secbuy = 5;
+}
+document.getElementById('godness').onclick = function(){
+hidequality();
+showtype();
+secbuy = 6;
+}
+
+document.getElementById('killer').onclick = function(){
+trebuy = 0;
+checkbuy();
+}
+document.getElementById('wizzard').onclick = function(){
+trebuy = 1;
+checkbuy();
+}
+document.getElementById('rock').onclick = function(){
+trebuy = 2;
+checkbuy();
+}
+checkbuy = function () {hidetype();
+if(gold>=kachestvo[secbuy][trebuy][buy][6]*2){
+gold-=kachestvo[secbuy][trebuy][buy][6]*2;
+document.getElementById('gold').innerHTML=gold+"g";
+equip(kachestvo[secbuy][trebuy][buy]);
+alert("Вы купили :"+kachestvo[secbuy][trebuy][buy][8]);
+}else(alert("у вас недостаточно денег"));}
+</script>
